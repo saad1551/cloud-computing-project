@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Container, Button, Input, Title } from './SharedStyles';
+import { Button, Input } from './SharedStyles';
 
 const LoginForm = () => {
     const [username, setUsername] = useState('');

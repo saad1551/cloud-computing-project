@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import VideoList from '../components/VideoList';
 import VideoUpload from '../components/VideoUpload';
-import { VideoListContainer, UploadContainer } from '../components/SharedStyles';
+import { VideoListContainer } from '../components/SharedStyles';
 
 
 const MainPage = () => {

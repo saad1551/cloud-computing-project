@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, StyledFileInput, UploadContainer, Video_Input } from './SharedStyles';
+import { Button, StyledFileInput, UploadContainer } from './SharedStyles';
 
 const VideoUpload = () => {
     const [selectedFile, setSelectedFile] = useState(null);

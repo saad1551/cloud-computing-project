@@ -1,9 +1,9 @@
 import React from 'react';
-import { HeaderContainer, Header_Title } from './SharedStyles';
+import { HeaderContainer, HeaderTitle } from './SharedStyles';
 const Header = () => {
   return (
     <HeaderContainer>
-      <Header_Title>YayTube</Header_Title>
+      <HeaderTitle>YayTube</HeaderTitle>
     </HeaderContainer>
   );
 };

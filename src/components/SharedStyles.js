@@ -183,7 +183,7 @@ export const HeaderContainer = styled.header`
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 `;
 
-export const Header_Title = styled.h1`
+export const HeaderTitle = styled.h1`
   margin: 0;
   font-size: 2em;
   font-weight: 700;
