@@ -24,8 +24,13 @@ const MainPage = () => {
                     navigate('/login');
                 }
             } catch (error) {
-                toast.error('Error fetching videos. Displaying mock data.');
-                console.error('Error fetching videos:', error);
+                if (error.response && error.response.status === 401) {
+                    toast.error('You must be logged in to view this page.');
+                    navigate('/login');
+                } else {
+                    toast.error('Error fetching videos. Displaying mock data.');
+                    console.error('Error fetching videos:', error);
+                }
                 // Mock data as a backup
                 const mockVideos = [
                     { videoId: 1, title: 'Video 1', length: "00:00:06", url: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4', thumbnailSignedUrl: 'https://i.ytimg.com/vi/WzDmoTydaEk/maxresdefault.jpg', uploadDate: "2024-12-29T11:48:06.140Z", uploadedBy: 'User A' },
