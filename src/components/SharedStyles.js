@@ -70,7 +70,7 @@ export const StyledFileInput = styled.input`
         font-size: 16px;
         font-weight: 500;
         transition: background-color 0.3s ease;
-        margin-right: 10px; 
+        margin: 10px; /* Added margin */
 
         &:hover {
             background-color: #1e88e5;

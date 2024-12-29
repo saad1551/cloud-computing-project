@@ -29,7 +29,7 @@ const MainPage = () => {
             <VideoListContainer>
                 <VideoList videos={videos} />
             </VideoListContainer>
-                <VideoUpload />
+            <VideoUpload />
         </>
     );
 };
