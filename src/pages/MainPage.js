@@ -6,12 +6,18 @@ import { VideoListContainer } from '../components/SharedStyles';
 import VideoList from '../components/VideoList';
 import VideoUpload from '../components/VideoUpload';
 import { useNavigate } from 'react-router-dom';
+import { isLoggedIn } from '../utils/auth';
 
 const MainPage = () => {
     const [videos, setVideos] = useState([]);
     const navigate = useNavigate();
 
     useEffect(() => {
+        if (!isLoggedIn()) {
+            toast.error('You must be logged in to view this page.');
+            navigate('/login');
+        }
+        
         const fetchVideos = async () => {
             try {
                 const response = await axios.get(`${process.env.REACT_APP_STORAGE_URL}/storage/media/dashboard-videos`, {
