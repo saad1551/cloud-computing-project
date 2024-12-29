@@ -8,7 +8,7 @@ const mockVideo = {
     videoId: 1,
     title: 'Mock Video',
     length: "00:00:06",
-    url: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+    videoSignedUrl: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
     thumbnailSignedUrl: 'https://i.ytimg.com/vi/WzDmoTydaEk/maxresdefault.jpg',
     uploadDate: "2024-12-29T11:48:06.140Z",
     uploadedBy: 'Mock User'
@@ -50,7 +50,7 @@ const VideoPage = () => {
     return (
         <Container>
             <Video controls>
-                <source src={video.url} type="video/mp4" />
+                <source src={video.videoSignedUrl} type="video/mp4" />
                 Your browser does not support the video tag.
             </Video>
             <VideoTitle>{video.title}</VideoTitle>
