@@ -1,10 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { HeaderContainer, HeaderTitle, ButtonContainer, HeaderButton } from './SharedStyles';
-import { isLoggedIn } from '../utils/auth';
 
 const Header = () => {
-  const loggedIn = isLoggedIn();
+  const loggedIn = localStorage.getItem("isLoggedIn");
 
   return (
     <HeaderContainer>

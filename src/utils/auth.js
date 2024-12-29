@@ -1,3 +1,3 @@
 export const isLoggedIn = () => {
-    return !!localStorage.getItem('authToken');
+    return !!localStorage.getItem('jwt');
 };

@@ -25,6 +25,7 @@ const LoginForm = () => {
       );
       if (response.status === 200) {
         toast.success("Login successful!");
+        localStorage.setItem("isLoggedIn", "true");
         navigate("/");
       } else {
         toast.error("Error logging in.");
