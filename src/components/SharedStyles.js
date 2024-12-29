@@ -223,3 +223,10 @@ export const VideoLength = styled.span`
   color: gray;
   margin-top: 5px;
 `;
+
+export const UploadDate = styled.p`
+  text-align: center;
+  font-size: 0.9em;
+  color: gray;
+  margin: 5px 0 10px;
+`;

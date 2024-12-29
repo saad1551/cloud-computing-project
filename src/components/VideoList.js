@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { VideoItem, VideoTitle, UserInfo, Thumbnail, VideoLength } from './SharedStyles';
+import { VideoItem, VideoTitle, UserInfo, Thumbnail, VideoLength, UploadDate } from './SharedStyles';
 
 const VideoList = ({ videos }) => {
     return (
@@ -13,6 +13,7 @@ const VideoList = ({ videos }) => {
                         <VideoLength>{video.length}</VideoLength>
                     </Link>
                     <UserInfo>Uploaded by: {video.uploadedBy}</UserInfo>
+                    <UploadDate>Upload date: {new Date(video.uploadDate).toLocaleDateString()}</UploadDate>
                 </VideoItem>
             ))}
         </>
