@@ -1,17 +1,16 @@
 import React from 'react';
-import VideoPlayer from './VideoPlayer';
-import { VideoItem, VideoTitle, UserInfo } from './SharedStyles';
 import { Link } from 'react-router-dom';
+import { VideoItem, VideoTitle, UserInfo, Thumbnail } from './SharedStyles';
 
 const VideoList = ({ videos }) => {
     return (
         <>
             {videos.map((video) => (
-                <VideoItem key={video.id} >
+                <VideoItem key={video.id}>
                     <Link to={`/${video.id}`}>
+                        <Thumbnail src={video.thumbnail} alt={video.title} />
                         <VideoTitle>{video.title}</VideoTitle>
                     </Link>
-                    <VideoPlayer videoUrl={video.url} />
                     <UserInfo>{video.user}</UserInfo>
                 </VideoItem>
             ))}

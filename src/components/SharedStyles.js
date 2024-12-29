@@ -208,3 +208,10 @@ export const ContactInfo = styled.p`
   margin: 5px 0;
   color: white;
 `;
+
+export const Thumbnail = styled.img`
+  width: 100%;
+  height: auto;
+  display: block;
+  border-bottom: 1px solid ${borderColor};
+`;
