@@ -11,21 +11,22 @@ import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
-    <div className="app-container">
-      <ToastContainer />
-      <Header />
-      <Router>
+    <Router>
+      <div className="app-container">
+        <ToastContainer />
+        <Header />
         <main>
-            <Routes>
-                <Route path="/login" element={<LoginPage />} />
-                <Route path="/register" element={<RegisterPage />} />
-                <Route path="/" element={<MainPage />} />
-                <Route path="/:id" element={<VideoPage />} />
-            </Routes>
+          <Routes>
+            <Route path="/" element={<MainPage />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/register" element={<RegisterPage />} />
+            <Route path="/manage-account" element={<div>Manage Account Page</div>} />
+            <Route path="/:id" element={<VideoPage />} />
+          </Routes>
         </main>
-      </Router>
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

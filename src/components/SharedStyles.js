@@ -101,7 +101,6 @@ export const VideoListContainer = styled.div`
   box-sizing: border-box;
 `;
 
-
 export const VideoItem = styled.div`
   width: calc(20% - 10px); /* 5 videos per row */
   max-width: 1000px;
@@ -175,10 +174,12 @@ export const Video = styled.video`
 `;
 
 export const HeaderContainer = styled.header`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: ${primaryColor};
   color: white;
   padding: 20px;
-  text-align: center;
   margin-bottom: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 `;
@@ -229,4 +230,31 @@ export const UploadDate = styled.p`
   font-size: 0.9em;
   color: gray;
   margin: 5px 0 10px;
+`;
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  gap: 10px;
+`;
+
+export const HeaderButton = styled.button`
+  padding: 10px 20px;
+  background-color: white;
+  color: ${primaryColor};
+  border: 2px solid ${primaryColor};
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    background-color: ${primaryColor};
+    color: white;
+  }
+
+  &:active {
+    background-color: #1976d2;
+    color: white;
+  }
 `;
