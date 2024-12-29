@@ -14,7 +14,7 @@ const MainPage = () => {
     useEffect(() => {
         const fetchVideos = async () => {
             try {
-                const response = await axios.get(`${process.env.REACT_APP_API_URL}/storage/media/dashboard-videos`, {
+                const response = await axios.get(`${process.env.REACT_APP_STORAGE_URL}/storage/media/dashboard-videos`, {
                     withCredentials: true
                 });
                 if (response.status === 200) {
