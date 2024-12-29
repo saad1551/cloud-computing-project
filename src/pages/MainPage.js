@@ -16,8 +16,9 @@ const MainPage = () => {
         if (!isLoggedIn()) {
             toast.error('You must be logged in to view this page.');
             navigate('/login');
+            return;
         }
-        
+
         const fetchVideos = async () => {
             try {
                 const response = await axios.get(`${process.env.REACT_APP_STORAGE_URL}/storage/media/dashboard-videos`, {
