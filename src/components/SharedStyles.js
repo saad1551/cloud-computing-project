@@ -215,3 +215,11 @@ export const Thumbnail = styled.img`
   display: block;
   border-bottom: 1px solid ${borderColor};
 `;
+
+export const VideoLength = styled.span`
+  display: block;
+  text-align: center;
+  font-size: 0.9em;
+  color: gray;
+  margin-top: 5px;
+`;
