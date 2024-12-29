@@ -15,7 +15,7 @@ export const Container = styled.div`
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 100%; 
-  max-width: 700px; 
+  max-width: 1000px; 
   margin: 40px auto;
   box-sizing: border-box;
 `;
@@ -215,6 +215,7 @@ export const Thumbnail = styled.img`
   height: auto;
   display: block;
   border-bottom: 1px solid ${borderColor};
+  max-width: 500px;
 `;
 
 export const VideoLength = styled.span`
@@ -256,5 +257,77 @@ export const HeaderButton = styled.button`
   &:active {
     background-color: #1976d2;
     color: white;
+  }
+`;
+
+export const VideoListItem = styled.li`
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid ${borderColor};
+  border-radius: 8px;
+  background-color: ${backgroundColor};
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+`;
+
+export const VideoDetails = styled.div`
+  margin-left: 10px;
+  flex: 1;
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+`;
+
+export const ButtonGroup = styled.div`
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    justify-content: space-between;
+  }
+`;
+
+export const AdminVideoListContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70vw;
+  padding: 0;
+  list-style-type: none;
+`;
+
+export const AdminVideoListItem = styled.li`
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid ${borderColor};
+  border-radius: 8px;
+  background-color: ${backgroundColor};
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+`;
+
+export const AdminVideoDetails = styled.div`
+  margin-left: 10px;
+  flex: 1;
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+    margin-top: 10px;
   }
 `;
