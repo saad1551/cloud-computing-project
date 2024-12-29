@@ -22,7 +22,7 @@ const VideoPage = () => {
     useEffect(() => {
         const fetchVideo = async () => {
             try {
-                const response = await axios.get(`${process.env.REACT_APP_API_URL}/storage/media/video/${id}`, {
+                const response = await axios.get(`${process.env.REACT_APP_STORAGE_URL}/storage/media/video/${id}`, {
                     withCredentials: true
                 });
                 if (response.status === 200) {

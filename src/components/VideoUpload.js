@@ -31,7 +31,7 @@ const VideoUpload = () => {
 
         setLoading(true);
         try {
-            const response = await axios.post(`${process.env.REACT_APP_API_URL}/media/video`, formData, {
+            const response = await axios.post(`${process.env.REACT_APP_STORAGE_URL}/media/video`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
