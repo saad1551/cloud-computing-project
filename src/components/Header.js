@@ -13,7 +13,7 @@ const Header = () => {
         {loggedIn ? (
           <>
             <Link to="/"><HeaderButton>Main Page</HeaderButton></Link>
-            <Link to="/manage-account"><HeaderButton>Manage Account</HeaderButton></Link>
+            <Link to="/admin"><HeaderButton>Admin Portal</HeaderButton></Link>
           </>
         ) : (
           <>

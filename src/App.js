@@ -25,7 +25,6 @@ function App() {
             <Route path="/:id" element={<VideoPage />} />
             <Route path="/admin" element={<AdminPortal />} />
             <Route path="/update-video/:videoId" element={<UpdateVideo />} />
-            <Route path="/manage-account" element={<div>Manage Account Page</div>} />
           </Routes>
         </main>
         <Footer />
