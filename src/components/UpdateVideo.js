@@ -51,7 +51,7 @@ const UpdateVideo = () => {
         headers: { "Content-Type": "multipart/form-data" },
         withCredentials: true,
       });
-      navigate("/admin/videos");
+      navigate("/admin");
     } catch (error) {
       console.error("Error updating video:", error);
     }
