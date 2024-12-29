@@ -6,12 +6,12 @@ const VideoList = ({ videos }) => {
     return (
         <>
             {videos.map((video) => (
-                <VideoItem key={video.id}>
-                    <Link to={`/${video.id}`}>
-                        <Thumbnail src={video.thumbnail} alt={video.title} />
+                <VideoItem key={video.videoId}>
+                    <Link to={`/${video.videoId}`}>
+                        <Thumbnail src={video.thumbnailSignedUrl} alt={video.title} />
                         <VideoTitle>{video.title}</VideoTitle>
                     </Link>
-                    <UserInfo>{video.user}</UserInfo>
+                    <UserInfo>{video.uploadedBy}</UserInfo>
                 </VideoItem>
             ))}
         </>
